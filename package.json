@@ -1,0 +1,26 @@
+{
+  "name": "painthit",
+  "version": "1.0.0",
+  "description": "a canvas game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LhrAlander/PaintHit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LhrAlander/PaintHit/issues"
+  },
+  "homepage": "https://github.com/LhrAlander/PaintHit#readme",
+  "devDependencies": {
+    "ts-loader": "^4.4.1",
+    "typescript": "^2.9.2",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.7"
+  }
+}
