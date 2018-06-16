@@ -6,7 +6,7 @@ module.exports = {
 	},
 	output: {
 		filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, 'dist/js')
 	},
 	module: {
 		rules: [
@@ -15,6 +15,14 @@ module.exports = {
 				loader: 'ts-loader',
 				exclude: /node_modules/,
 			},
+			{
+				test: /\.js?$/,
+				loader: 'babel-loader',
+				exclude: /node_modules/,
+				query: {
+					presets: ['env']
+				}
+			}
 		]
 	},
 	resolve: {
