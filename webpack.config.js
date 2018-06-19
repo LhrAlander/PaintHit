@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
 	entry: {
 		startPage: './ts/startPage.ts',
@@ -28,4 +29,14 @@ module.exports = {
 	resolve: {
 		extensions: [".tsx", ".ts", ".js"]
 	},
- };
+	devServer: {
+		contentBase: './dist'
+	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			filename: 'index.html',
+			template: './scenes/index.html',
+			chunks: ['startPage']
+		})
+	]
+};
